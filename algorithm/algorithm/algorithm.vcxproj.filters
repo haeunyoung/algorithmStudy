@@ -33,5 +33,23 @@
     <ClCompile Include="day3_problem.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="day4_insert_sort.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day4_problem.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day7_2752.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day7_2751.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day7_2750.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day5,6_quicksort.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
