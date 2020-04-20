@@ -51,5 +51,17 @@
     <ClCompile Include="day5,6_quicksort.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="day8_mergeSort.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day8_11650.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day8_10814.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day9_11651.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
