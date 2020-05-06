@@ -20,6 +20,9 @@ long int calculate_dis(Distance a, Distance b)
 
 int bfs(Distance* d, int start)
 {
+	if (d[start].distance_fes <= 1000)
+		return 1;
+
 	if (start == n)
 	{
 		if (d[start].distance_fes <= 1000)
@@ -43,7 +46,7 @@ int bfs(Distance* d, int start)
 int testcase()
 {
 	cin >> n;
-	Distance dis[200] = {0,};
+	Distance dis[200] = { 0, };
 	long int x, y;
 
 	for (int i = 0; i < n + 2; i++)
@@ -60,7 +63,7 @@ int testcase()
 			dis[i].link.push_back(j);
 
 	}
-
+	printf("%d ", bfs(dis, 0));
 	return bfs(dis, 0);
 }
 
