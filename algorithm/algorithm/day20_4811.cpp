@@ -3,7 +3,7 @@
 #include<queue>
 
 using namespace std;;
-int number = 7;
+int v = 7;
 int c[7];
 vector<int> a[8];
 

@@ -1,12 +1,12 @@
 #include<stdio.h>
 
-int number = 10;
+int node = 10;
 int data[] = { 1,10,5,8,7,6,4,3,2,9 };
 
 void show()
 {
 	int i;
-	for (i = 0; i < number; i++)
+	for (i = 0; i < node; i++)
 		printf("%d ", data[i]);
 }
 
@@ -49,7 +49,7 @@ void quickSort(int* data, int start, int end)
 }
 int main(void)
 {
-	quickSort(data, 0, number - 1);
+	quickSort(data, 0, node - 1);
 	show();
 	return 0;
 }

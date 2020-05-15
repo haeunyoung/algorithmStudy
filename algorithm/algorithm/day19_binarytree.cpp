@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int number = 15;
+int node = 15;
 
 typedef struct node* treePointer;
 typedef struct node {
@@ -44,14 +44,14 @@ void postorder(treePointer ptr)
 int main()
 {
 	node nodes[16];
-	for (int i = 1; i <= number; i++)
+	for (int i = 1; i <= node; i++)
 	{
 		nodes[i].data = i;
 		nodes[i].leftchild = NULL;
 		nodes[i].rightChild = NULL;
 
 	}
-	for (int i = 1; i <= number; i++)
+	for (int i = 1; i <= node; i++)
 	{
 		if (i % 2 == 0)
 		{

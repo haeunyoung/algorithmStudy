@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int number = 8;
+int node = 8;
 int size;
 int sorted[8];
 int count = 0;
@@ -62,9 +62,9 @@ int main(void)
 {
 
 	int array[] = { 7,6,5,8,3,5,9,1 };
-	mergeSort(array, 0, number - 1);
+	mergeSort(array, 0, node - 1);
 
-	for (int i = 0; i < number; i++)
+	for (int i = 0; i < node; i++)
 		printf("%d ", array[i]);
 
 }
