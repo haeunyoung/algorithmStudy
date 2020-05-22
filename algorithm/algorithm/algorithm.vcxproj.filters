@@ -180,5 +180,20 @@
     <ClCompile Include="day30_4386.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="day30_networkFlow.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day31_bipartiteMatching.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day32_KMP.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day31_1647.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day32_2156.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
