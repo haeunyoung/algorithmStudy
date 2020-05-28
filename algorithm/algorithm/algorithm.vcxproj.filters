@@ -216,5 +216,14 @@
     <ClCompile Include="day37_1937.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="day37_2150.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day37_4196.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="day37_3977.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
