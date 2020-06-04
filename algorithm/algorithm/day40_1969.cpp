@@ -10,44 +10,53 @@ int main(void)
 	cin >> n >> m;
 
 	string s[1001];
-	int hamming[1001] = { 0, };
+	char answer[51];
+	int haming = 0;
 
 	for (int i = 0; i < n; i++)
 	{
 		cin >> s[i];
 	}
 	
-	sort(s, s + n);
-
-	for (int i = 0; i < n; i++)
+	char arr[4] = { 'A','C','G','T' };
+	for (int i = 0; i < m; i++)
 	{
+		int max = -1,max_index=0;
+		int count[4] = { 0, };
 		for (int j = 0; j < n; j++)
 		{
-			for (int z = 0; z < m; z++)
-			{
-				if (s[i][z] != s[j][z])
-				{
-					hamming[i]++;
-				}
-	
-
-			}
+			if (s[j][i] == 'A')
+				count[0]++;
+			else if (s[j][i] == 'C')
+				count[1]++;
+			else if (s[j][i] == 'G')
+				count[2]++;
+			else
+				count[3]++;
 
 		}
-	}
-
-	int min = 100;
-	int min_index;
-
-	for (int i = 0; i < n; i++)
-	{
-		if (hamming[i] < min)
+		for (int z = 0; z < 4; z++)
 		{
-			min_index = i;
-			min = hamming[i];
+			if (count[z] >max)
+			{
+				max = count[z];
+				max_index = z;
+			}
 		}
+		answer[i] = arr[max_index];
+
+		for (int z = 0; z < 4; z++)
+		{
+			if (z!=max_index)
+			{
+				haming+=count[z];
+			}
+		}
+
 	}
-	cout << s[min_index]<<"\n";
-	cout << min << "\n";
+
+	for (int i = 0; i < m; i++)
+		printf("%c", answer[i]);
+	printf("\n%d\n", haming);
 
 }
