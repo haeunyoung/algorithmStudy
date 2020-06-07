@@ -40,24 +40,25 @@ public:
 
 int main(void)
 {
-	int n = 1, m = 1;
+	int n=1, m=1;
 
 	while (n != 0 && m != 0)
 	{
 		cin >> n >> m;
 		vector<Weight> v;
 		int set[100001];
-		for (int i = 1; i <= n; i++)
+		for (int i = 1; i <=n; i++)
 			set[i] = i;
 
 		for (int i = 0; i < m; i++)
 		{
-			char c;
-			cin >> c;
+			int c;
+			scanf_s("%c", &c);
+			
 			if (c == '!')
 			{
 				int exc1, exc2, exc3;
-				scanf("%d %d %d", &exc1, &exc2, &exc3);
+				scanf_s("%d %d %d", &exc1, &exc2, &exc3);
 				v.push_back(Weight(exc1, exc2, exc3));
 				v.push_back(Weight(exc2, exc1, -exc3));
 				unionParent(set, exc1, exc2);
@@ -65,13 +66,13 @@ int main(void)
 			else
 			{
 				int q1, q2;
-				scanf("%d %d", &q1, &q2);
-				int answer = find(set, q1, q2);
+				scanf_s("%d %d", &q1, &q2);
+				int answer=find(set, q1, q2);
 				if (answer == 0)
 					printf("UNKNOWN\n");
 				else {
-
-					int check, big;
+					
+					int check,big;
 					int reverse = 0;
 					if (q1 < q2)
 					{
@@ -84,13 +85,13 @@ int main(void)
 						big = q1;
 						reverse = 1;
 					}
-
+					
 					int arr[1000001];
 					int arr_index = 0;
-
-					for (int j = check; j <= big; j++)
+					
+					for (int j = 1; j <=big; j++)
 					{
-						if (set[j] == set[check])
+						if (set[j] == check)
 						{
 							arr[arr_index] = j;
 							arr_index++;
@@ -98,8 +99,8 @@ int main(void)
 
 					}
 					int sum = 0;
-
-					for (int z = 0; z < arr_index - 1; z++)
+					
+					for (int z = 0; z <arr_index-1; z++)
 					{
 						for (int j = 0; j < v.size(); j++)
 						{
@@ -110,17 +111,17 @@ int main(void)
 							}
 						}
 					}
-
+					
 					if (reverse == 1)
 						printf("%d\n", -sum);
 					else
 						printf("%d\n", sum);
-
+						
 				}
-
+				
 			}
-
+			
 		}
-
+		
 	}
 }
