@@ -1,86 +1,56 @@
 #include<iostream>
-#include<algorithm>
-#include<vector>
+
 using namespace std;
-
-
-int getParent(int set[], int x)
-{
-	if (set[x] == x) return x;
-	return set[x] = getParent(set, set[x]);
-}
-void unionParent(int set[], int a, int b)
-{
-	a = getParent(set, a);
-	b = getParent(set, b);
-	if (a > b) set[a] = b;
-	else set[b] = a;
-}
-int find(int set[], int a, int b)
-{
-	a = getParent(set, a);
-	b = getParent(set, b);
-	if (a == b)return 1;
-	else return 0;
-}
-
-class Node {
-public:
-	int point[2],distance;
-
-	Node(int a, int b, int distance)
-	{
-		this->point[0] = a;
-		this->point[1] = b;
-		this->distance = distance;
-	}
-	bool operator<(Node& node)
-	{
-		return this->distance < node.distance;
-	}
-
-};
 
 
 int main(void)
 {
 	int n;
 	cin >> n;
-	vector<Node> v;
+
+	int arr[21][21];
+	int d[21][21];
+
 	for (int i = 0; i < n; i++)
 	{
 		for (int j = 0; j < n; j++)
 		{
-			int temp;
-			scanf("%d", &temp);
-			if (i == j) continue;
-			v.push_back(Node(i, j, temp));
+			scanf("%d", &arr[i][j]);
+			d[i][j] = arr[i][j];
 		}
 	}
-
-	sort(v.begin(), v.end());
-
-	int min_distance = 0;
-	int set[21] = {0,};
+	int distance = 0;
 	for (int i = 0; i < n; i++)
-		set[i] = i;
+	{
+		for (int j = 0; j < n; j++)
+		{
+			if (i == j)continue;
+			for (int z = 0; z < n; z++)
+			{
+				if (i == z)continue;
+				if (arr[j][z] > arr[j][i] + arr[i][z])
+				{
+					distance = -1;
+				}
+				else if (arr[j][z] == arr[j][i] + arr[i][z])
+					d[j][z] = 0;
 
-	for (int i = 0; i < v.size(); i++)
-	{
-		if (!find(set, v[i].point[0], v[i].point[1]))
-		{
-			unionParent(set, v[i].point[0], v[i].point[1]);
-			min_distance += v[i].distance;
+			}
 		}
 	}
-	int a = set[0];
-	for (int i = 1; i < n; i++)
+	if (distance == -1)
+		printf("-1\n");
+	else
 	{
-		if (a != set[i])
+		for (int i = 0; i < n; i++)
 		{
-			min_distance = -1;
-			break;
+			for (int j = 0; j < n; j++)
+			{
+				distance += d[i][j];
+			}
 		}
+		//i->j j->i 둘다 계산 했으니 2로 나누어 준다. 
+		printf("%d\n", distance / 2);
+
 	}
-	printf("%d\n", min_distance);
 }
