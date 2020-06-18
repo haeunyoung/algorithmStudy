@@ -11,8 +11,20 @@ int main(void)
 		int n, m;
 		cin >> n >> m;
 
-		int ms;
-		cin >> ms;
+		long long a = 1;
+		long long b = 1;
 
+		if (m - n < n) n = m - n;
+		for (int i = m; i > m - n; i--)
+		{
+			a = a * i;
+		}
+
+		for (int i = n; i >= 1; i--)
+		{
+			b = b * i;
+		}
+
+		printf("%lld\n", a / b);
 	}
 }
