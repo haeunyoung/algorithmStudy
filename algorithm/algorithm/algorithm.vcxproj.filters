@@ -288,5 +288,8 @@
     <ClCompile Include="day51_kakao2.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="day52_heapsort.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
