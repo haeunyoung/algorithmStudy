@@ -3,20 +3,13 @@
 using namespace std;
 int num;
 int arr[101];
-int dp(int index,int ex){
+int d[101][2];
+int dp(int index){
 
-	if (ex == 0)
-	{
-		int t1 = -arr[index] + dp(index + 1, 0);
-		int t2= -arr[index] + dp(index + 1, 1);
-	}
-	else
-	{
-		int t3 = arr[index] + dp(index + 1, 0);
-		int t4 = arr[index] + dp(index + 1, 1);
-
-	}
-
+	
+	d[index + 1][0] = arr[index] + arr[index + 1];
+	
+	d[index + 1][1] = arr[index] -arr[index + 1];
 
 }
 int main(void)
@@ -29,7 +22,7 @@ int main(void)
 		arr[i] = temp;
 
 	}
-	dp(0,1);
+	dp(0);
 
 
 }
