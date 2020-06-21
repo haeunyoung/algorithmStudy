@@ -380,6 +380,7 @@
     </ClCompile>
     <ClCompile Include="day53_5557.cpp" />
     <ClCompile Include="day54_6603.cpp" />
+    <ClCompile Include="day55_kakao3.cpp" />
     <ClCompile Include="day7_2750.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
     </ClCompile>
