@@ -24,5 +24,7 @@ int main(void)
 	}
 	dp(0);
 
+	dp(1);
+	dp(2);
 
 }
