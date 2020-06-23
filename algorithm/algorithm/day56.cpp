@@ -17,10 +17,7 @@ int main(void)
 		if (c[i] != 0)
 		{
 			for (int j = 0; j < c[i]; j++)
-			{
 				printf("%d", i);
-			}
 		}
 	}
-	printf("\n");
 }
